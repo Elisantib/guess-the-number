@@ -13,7 +13,7 @@ public class HumanPlayer extends Player{
     //Metodos
     @Override
     public ArrayList<Integer> makeGuess() {
-
+        /*
         System.out.println("Ingresa un número del 1 al 100");
 
         //El jugador ingresa su numero como string y luego se transforma a int con parse
@@ -22,8 +22,10 @@ public class HumanPlayer extends Player{
         int numeroElegidoConv = Integer.parseInt(numeroElegido);
         ArrayList<Integer> numeroEscogido = new ArrayList<>();
         numeroEscogido.add(numeroElegidoConv);
+        */
+        return makeGuess();
 
-        return numeroEscogido;
+
     }
 
 }
