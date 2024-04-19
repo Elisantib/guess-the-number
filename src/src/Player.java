@@ -9,54 +9,26 @@ public abstract class Player {
     private String name;
     protected ArrayList<Integer> guesses;
 
+
     //Constructores
 
-    public Player() {
-    }
-/*
     public Player(String name) {
         this.name = name;
+        this.guesses = new ArrayList<>();
     }
- */
-
-/*
-    @Override
-    public String toString() {
-        return "Player{" +
-                "name='" + name + '\'' +
-                ", guesses=" + guesses +
-                '}';
-    }
-
- */
 
     //Métodos
     public String getName() {
         //El jugador Ingresa su nombre
-        Scanner entrada = new Scanner(System.in);
-        String name1 = entrada.nextLine();
 
-        return name1;
+        return name;
     }
 
-    public ArrayList<Integer> makeGuess() {
-        //System.out.println(guesses);
+    public abstract int makeGuess();
+
+    public ArrayList<Integer> getGuesses() {
+
         return guesses;
-    }
-
-    public ArrayList<Integer> getGuesses(ArrayList<Integer> intentos) {
-
-
-        ArrayList<Integer> suposiciones = intentos;
-        //suposiciones = intentos;
-
-        //Se crea array vacio fuera de bucle para guardar aqui todos los numeros ingresados
-        ArrayList<Integer> intentosGuardados = new ArrayList<>();
-
-        //Cada numero ingresado por el jugador se guarda en "intentosGuardados"
-        intentosGuardados.addAll(suposiciones);
-
-        return intentosGuardados;
     }
 
 

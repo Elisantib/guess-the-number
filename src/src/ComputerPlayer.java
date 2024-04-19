@@ -7,24 +7,27 @@ public class ComputerPlayer extends Player{
 
     //Atributos
     private Random numAleatorio = new Random();
-    private int numeroAl = numAleatorio.nextInt(100+1);
 
     //constructores
-    public ComputerPlayer() {
-        this.guesses = new ArrayList<>();
-    }
-    public ComputerPlayer(int numeroAl) {
-        this.numeroAl = numeroAl;
+    public ComputerPlayer(String name) {
+        super(name);
     }
 
 
     //anotación q' indica q' un método en una subclase está sobrescribiendo un método en su superclase
-    /*
     @Override
-    public int[] makeGuess() {
-        return super.makeGuess();
+    public int makeGuess() {
+
+        int numGuardado = numAleatorio.nextInt(100 + 1);
+        this.getGuesses().add(numGuardado);
+        System.out.println("\u001B[34m" + "\n" + "número de la computadora: " + numGuardado);
+
+        return numGuardado;
+
+
+
     }
-     */
+
 
 
 }
